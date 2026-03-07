@@ -1,99 +1,85 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Network - Noticias</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* Contenedor centralizado para la lectura */
+.article-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
 
-    <div class="sidebar-animada">
-        <a href="https://facebook.com" target="_blank" class="s-link fb"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/network_718/" target="_blank" class="s-link ig"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://linkedin.com" target="_blank" class="s-link ln"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="https://whatsapp.com" target="_blank" class="s-link wa"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="https://tiktok.com" target="_blank" class="s-link tk"><i class="fa-brands fa-tiktok"></i></a>
-    </div>
+/* Botón de volver */
+.btn-back {
+    display: inline-block;
+    color: #185adb;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
 
-    <header class="navbar">
-        <div class="logo">Network</div>
-        <nav>
-            <ul>
-                <li><a href="htmlsecundarios/economia.html">ECONOMÍA</a></li>
-                <li><a href="htmlsecundarios/deportes.html">DEPORTES</a></li>
-                <li><a href="htmlsecundarios/tecnologia.html">TECNOLOGÍA</a></li>
-                <li><a href="htmlsecundarios/cocina.html">COCINA</a></li>
-                <li><a href="htmlsecundarios/politica.html">POLÍTICA</a></li>
-            </ul>
-        </nav>
-        <div class="search-icon">🔍</div>
-    </header>
+/* Título de la noticia */
+.article-content h1 {
+    font-size: 40px;
+    color: #0a1931;
+    margin-bottom: 30px;
+}
 
-    <main class="container">
-        <div class="hero-section">
-            <section class="main-story">
-                <span class="badge">Último minuto</span>
-                <div class="story-content">
-                    <div class="story-image">
-                        <img src="Imagenes_index/img_principal.png" alt="USA vs IRAN">
-                    </div>
-                    <div class="story-text">
-                        <h1>USA vs IRAN</h1>
-                        <p>El conflicto bélico en Irán ha alcanzado un punto crítico tras varios días de bombardeos sistemáticos...</p>
-                        <a href="noticias.html?id=0" class="btn-more">Leer más</a>
-                    </div>
-                </div>
-            </section>
+/* --- AJUSTE DE IMAGEN Y TEXTO (EL CAMBIO PRINCIPAL) --- */
 
-            <aside class="sidebar">
-                <h2>Más noticias</h2>
-                <div class="side-item">
-                    <img src="Imagenes_index/img_masnoticias_1.png" alt="">
-                    <div>
-                        <h3>Tensión en Oriente Medio...</h3>
-                        <a href="noticias.html?id=1">Leer más</a>
-                    </div>
-                </div>
-                <div class="side-item">
-                    <img src="Imagenes_index/img_masnoticias_2.avif" alt="">
-                    <div>
-                        <h3>Caos en el Golfo...</h3>
-                        <a href="noticias.html?id=2">Leer más</a>
-                    </div>
-                </div>
-                <div class="side-item">
-                    <img src="Imagenes_index/img_masnoticias_3.jpeg" alt="">
-                    <div>
-                        <h3>Emergencia en Camisea...</h3>
-                        <a href="noticias.html?id=3">Leer más</a>
-                    </div>
-                </div>
-            </aside>
-        </div>
+/* La imagen flota a la izquierda, permitiendo que el texto fluya alrededor y debajo */
+.img-wrapper {
+    float: left; 
+    width: 300px;
+    margin-right: 25px; /* Espacio entre imagen y texto */
+    margin-bottom: 15px; /* Espacio debajo de la imagen */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
 
-        <section class="bottom-grid">
-            <div class="grid-item">
-                <img src="Imagenes_index/img_recomendaciones_1.jfif" alt="">
-                <h3>Fractura en Europa...</h3>
-                <a href="noticias.html?id=4">Leer más</a>
-            </div>
-            <div class="grid-item">
-                <img src="Imagenes_index/img_recomendaciones_2.jpg" alt="">
-                <h3>Crisis del Petróleo...</h3>
-                <a href="noticias.html?id=5">Leer más</a>
-            </div>
-            <div class="grid-item">
-                <img src="Imagenes_index/img_recomendaciones_3.avif" alt="">
-                <h3>Incertidumbre en el Mundial...</h3>
-                <a href="noticias.html?id=6">Leer más</a>
-            </div>
-        </section>
-    </main>
+.img-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    max-height: 400px;
+}
 
-    <footer class="site-footer">
-        <p>&copy; 2026 Network. Todos los derechos reservados.</p>
-    </footer>
-</body>
-</html>
+/* El texto ahora ocupará todo el espacio disponible automáticamente */
+.texto-noticia {
+    display: block;
+}
+
+.texto-noticia p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+/* --- SECCIÓN DE VIDEOS PEQUEÑOS (AL FINAL) --- */
+
+.videos-section {
+    clear: both; /* IMPORTANTE: Esto obliga a los videos a saltar debajo de la imagen */
+    width: 100%;
+    margin-top: 50px;
+    border-top: 1px solid #ddd;
+    padding-top: 40px;
+}
+
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    width: 100%;
+}
+
+.video-item {
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 100%;
+}
