@@ -21,7 +21,7 @@ Mientras los combates continúan y el intercambio de ataques no cesa, el secreta
                 <p>Aquí puedes poner todo el texto largo...</p>`,
         // AHORA ES UN ARRAY DE VIDEOS
         videos: [
-            "https://www.youtube.com/watch?v=i45-1IjRnPU", // Video 1
+            "https://www.youtube.com/watch?v=1YEO2MYMEGw", // Video 1
             "https://www.youtube.com/watch?v=i45-1IjRnPU", // Video 2 (Ejemplo)
             "https://www.youtube.com/embed/5U2zEbeP9W8"  // Video 3 (Ejemplo)
         ]
